@@ -1,0 +1,15 @@
+source_id,source_type,category,confidence,approved,review_issues,llm_used
+rev_001,app_store_review,Bug,0.93,True,,False
+rev_002,app_store_review,Bug,0.93,True,,False
+rev_003,app_store_review,Feature Request,0.91,True,,False
+rev_004,app_store_review,Praise,0.9,True,,False
+rev_005,app_store_review,Bug,0.93,True,,False
+rev_006,app_store_review,Complaint,0.88,True,,False
+rev_007,app_store_review,Praise,0.9,True,,False
+rev_008,app_store_review,Spam,0.97,True,,False
+email_001,support_email,Bug,0.93,True,,False
+email_002,support_email,Bug,0.93,True,,False
+email_003,support_email,Feature Request,0.91,True,,False
+email_004,support_email,Bug,0.93,True,,False
+email_005,support_email,Feature Request,0.91,True,,False
+email_006,support_email,Complaint,0.88,True,,False

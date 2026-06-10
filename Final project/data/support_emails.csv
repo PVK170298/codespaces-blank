@@ -1,0 +1,7 @@
+email_id,subject,body,sender_email,timestamp,priority
+email_001,App Crash Report,"The app crashes when I tap Settings on my iPhone 14 running iOS 17.5. Steps: open app -> sign in -> tap settings.",user1@example.com,2026-06-01T08:12:00Z,High
+email_002,Login Issue,"Unable to login after the update. My device is Samsung Galaxy S23 with Android 14. Please fix soon.",user2@example.com,2026-06-02T09:40:00Z,
+email_003,Feature Request: Dark Mode,"Would love to see a dark mode option in the app for evening use. It would make reading much easier.",user3@example.com,2026-06-03T11:02:00Z,
+email_004,Data Loss Problem,"Data sync is failing and some tasks disappeared after I refreshed the app. Please investigate.",user4@example.com,2026-06-04T12:30:00Z,
+email_005,Suggestion for Improvement,"Missing functionality for offline notes would be very helpful for travel.",user5@example.com,2026-06-05T14:00:00Z,Medium
+email_006,Poor Customer Service,"The app is slow and the support experience has been poor. I am disappointed.",user6@example.com,2026-06-06T16:18:00Z,Low

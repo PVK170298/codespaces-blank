@@ -1,3 +1,3 @@
-source_id,source_type,category,confidence,approved,review_issues,llm_used
-manual_1,app_store_review,Bug,0.5,True,,False
-manual_2,app_store_review,Feature Request,0.5,True,,False
+source_id,source_type,category,confidence,approved,review_issues,llm_used,llm_error
+manual_1,app_store_review,Bug,0.5,True,,False,Groq API error: HTTP Error 403: Forbidden
+manual_2,app_store_review,Feature Request,0.5,True,,False,Groq API error: HTTP Error 403: Forbidden

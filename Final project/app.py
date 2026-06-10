@@ -85,6 +85,7 @@ with actions_col:
         run_requested = st.button("Re-run", use_container_width=True, type="primary", key="rerun_button")
 
 st.subheader("Live feedback intake")
+st.info("This live intake step is part of the business workflow and feeds the processing pipeline directly.")
 feedback_text = st.text_area(
     "Paste feedback items",
     value="The app crashes when I open settings\nPlease add dark mode support",
@@ -142,16 +143,13 @@ if run_requested:
 
 if st.session_state.last_run_summary:
     st.subheader("Last run status")
-    st.metric("Run mode", st.session_state.last_run_summary["mode"])
-    st.metric("Items processed", st.session_state.last_run_summary["items"])
+    st.info(f"Processed {st.session_state.last_run_summary['items']} item(s) in {st.session_state.last_run_summary['mode']} mode.")
 
 if (OUTPUT_DIR / "generated_tickets.csv").exists():
     tickets = pd.read_csv(OUTPUT_DIR / "generated_tickets.csv")
     st.subheader("Ticket overview")
 
     display_columns = ["ticket_id", "source_id", "category", "priority", "title", "approval_status"]
-    if "llm_used" in tickets.columns:
-        display_columns.append("llm_used")
     st.dataframe(tickets[display_columns], use_container_width=True)
 
     if "llm_used" in tickets.columns:
@@ -176,7 +174,8 @@ else:
 st.subheader("Processing log")
 if (OUTPUT_DIR / "processing_log.csv").exists():
     log = pd.read_csv(OUTPUT_DIR / "processing_log.csv")
-    st.dataframe(log, use_container_width=True)
+    display_log_columns = [col for col in log.columns if col not in {"llm_used", "llm_error"}]
+    st.dataframe(log[display_log_columns], use_container_width=True)
 
 st.subheader("Metrics")
 if (OUTPUT_DIR / "metrics.csv").exists():

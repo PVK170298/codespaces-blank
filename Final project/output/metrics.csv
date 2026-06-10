@@ -1,2 +1,5 @@
 metric,value
-classification_accuracy,1.0
+total_feedback_items,2
+tickets_generated,2
+approved_tickets,2
+llm_classifications,0

@@ -1,20 +1,21 @@
 # Feedback Intelligence System
 
-This project implements a multi-agent feedback triage workflow with mock CSV inputs, NLP-based classification, ticket generation, a quality review step, and a Streamlit dashboard.
+This project now uses an LLM-first workflow with Groq for classification and ticket triage from live feedback input instead of hard-coded CSV-driven logic.
 
 ## Features
-- Reads app store reviews and support emails from CSV
-- Classifies feedback into Bug, Feature Request, Praise, Complaint, and Spam
+- Accepts live feedback text directly in the Streamlit UI
+- Classifies feedback into Bug, Feature Request, Praise, Complaint, and Spam using Groq
 - Extracts technical details and creates structured tickets
 - Writes generated tickets, processing logs, and metrics to CSV
 - Provides a Streamlit UI for monitoring and triggering processing
 
-## Run locally
+## Setup
 1. Install dependencies:
-   `python -m pip install --user pandas streamlit scikit-learn`
-2. Run the pipeline:
+   `python -m pip install --user pandas streamlit python-dotenv`
+2. Add your Groq key and model in the `.env` file.
+3. Run the pipeline:
    `python feedback_agents.py`
-3. Launch the UI:
+4. Launch the UI:
    `streamlit run app.py`
 
 ## Output files
